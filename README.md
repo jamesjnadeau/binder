@@ -1,6 +1,9 @@
 # JupyterLab + Binder
 
-[![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jamesjnadeau/binder/master?urlpath=lab/tree/index.ipynb)
+[![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jamesjnadeau/binder/master?urlpath=lab/tree/index.ipynb) - Launch Jupyter Lab
+
+ [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jamesjnadeau/binder/master?urlpath=voila) - Launch Voila
+
 
 JupyterLab is packaged with Binder repositories by default. In order to
 run a JupyterLab session, you have two options:
