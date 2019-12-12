@@ -16,4 +16,6 @@ dependencies:
   - jupyterlab=1.2.1 
   - voila 
   - jupyterlab-git
+  - pip
+    - nbinteract 
 

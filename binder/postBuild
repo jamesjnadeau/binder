@@ -5,6 +5,9 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.0 \
   @jupyterlab/celltags \
   @jupyterlab/toc \
   @jupyterlab/geojson-extension jupyterlab-drawio \
+  @jupyter-voila/jupyterlab-preview \
   --no-build
+
 jupyter serverextension enable --py jupyterlab_git
+
 jupyter lab build
