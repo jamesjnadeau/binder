@@ -99,3 +99,13 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# files added by binder
+.bash_logout
+.bashrc
+.conda
+.config
+.ipython
+.jupyter
+.local
+.npm
