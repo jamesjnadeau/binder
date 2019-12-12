@@ -1,0 +1,14 @@
+name: base
+dependencies:
+  - python=3.7
+  - numpy
+  - toolz
+  - matplotlib
+  - dill
+  - pandas
+  - partd
+  - traitlets>=4.3.1
+  - ipython
+  - vdom
+  - jupyterlab_launcher>=0.5.0
+
