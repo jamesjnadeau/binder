@@ -3,6 +3,7 @@ FROM jupyter/scipy-notebook:1386e2046833
 ARG NB_USER="jovyan"
 ARG NB_UID="1000"
 ARG NB_GID="100"
+ENV HOME /home/${NB_USER}
 
 USER $NB_UID
 
@@ -45,6 +46,9 @@ RUN jupyter notebook --generate-config -y
 # set up nbstripout
 RUN mkdir -p /home/$NB_USER/.config/git 
 RUN git init && nbstripout --global --attributes=/home/$NB_USER/.config/git/attributes --install && rm .git -rf
+
+# set up for binder, aka copy in repo
+COPY . ${HOME}/binder
 
 # fix permissions on folders so end user can do as they wish
 RUN fix-permissions $CONDA_DIR && \
