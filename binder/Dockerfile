@@ -39,11 +39,6 @@ RUN jupyter serverextension enable --py jupyterlab_git
 # Set notebook widgets to work
 RUN jupyter nbextension enable --py widgetsnbextension
 
-# Copy in our custom extension that loads our init.ipynb 
-COPY --chown=$NB_UID:$NB_GID aoe_init.py /home/$NB_USER/.ipython/extensions/aoe_init.py
-# Also copy to tmp so hub can run command to copy this to specific user folder upon container boot
-COPY --chown=$NB_UID:$NB_GID aoe_init.py /tmp/.ipython/extensions/aoe_init.py
-
 # Generate base jupyter config
 RUN jupyter notebook --generate-config -y
 
