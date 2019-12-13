@@ -30,7 +30,7 @@ jobs:
     
     # Build and push
     - run: |
-        docker build . -t ${{ env.CONTAINER_REGISTRY }}/binder:${{ github.sha }}
+        docker build ./binder/Dockerfile -t ${{ env.CONTAINER_REGISTRY }}/binder:${{ github.sha }}
         docker push ${{ env.CONTAINER_REGISTRY }}/binder:${{ github.sha }}
     
     # Deploy
