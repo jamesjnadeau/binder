@@ -17,6 +17,8 @@ RUN conda install --yes -c conda-forge "nodejs=10.8" ipywidgets ipython-sql pyms
 
 RUN conda init
 
+RUN pip install nbinteract
+
 # Lab Extensions
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.1 --no-build && \
